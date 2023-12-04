@@ -1,0 +1,14 @@
+button {
+  background-color: #333;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  display: block;
+  margin: 0 auto;
+  margin-top: 100px;
+  padding: 15px 50px;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+}
