@@ -21,6 +21,15 @@ function TodoProvider({ children }) {
         }
     );
 
+    const addTodo = (text) => {
+        const newTodo = [...stateTodos];
+        newTodo.push({
+            text,
+            completed: false
+        })
+        saveTodo(newTodo);
+    }
+
     const updateTodo = (key) => {
         const newTodos = [...stateTodos];
         const todoIndex = newTodos.findIndex((todo) => todo.text === key);
@@ -34,23 +43,24 @@ function TodoProvider({ children }) {
         saveTodo(newTodos);
     }
     return (
-        <>
-            <TodoContext.Provider value={{
-                error,
-                loading,
-                completedTodos,
-                totalTodos,
-                stateSearchValue,
-                setStateSearchValue,
-                searchTodos,
-                updateTodo,
-                deleteTodo,
-                openModal,
-                setOpenModal
-            }}>
-                {children}
-            </TodoContext.Provider>
-        </>);
+
+        <TodoContext.Provider value={{
+            error,
+            loading,
+            completedTodos,
+            totalTodos,
+            stateSearchValue,
+            setStateSearchValue,
+            searchTodos,
+            updateTodo,
+            deleteTodo,
+            openModal,
+            addTodo,
+            setOpenModal
+        }}>
+            {children}
+        </TodoContext.Provider>
+    );
 }
 
 export { TodoContext, TodoProvider }

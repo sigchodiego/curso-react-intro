@@ -3,6 +3,7 @@ import { TodoButton } from '../TodoButton';
 import { TodoSearch } from '../TodoSearch';
 import { TodoItem } from '../TodoItem';
 import { TodoList } from '../TodoList';
+import { TodoForm } from '../TodoForm';
 
 import { TodosLoading } from '../TodosLoading';
 import { TodosEmpty } from '../TodosEmpty';
@@ -43,7 +44,9 @@ function AppUi() {
             </TodoList>
             <TodoButton setOpenModal={setOpenModal} />
 
-            {openModal && (<Modal setOpenModal={setOpenModal} />)}
+            {openModal && <Modal >
+                <TodoForm />
+            </Modal>}
 
         </>
     );
