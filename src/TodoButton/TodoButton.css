@@ -1,6 +1,6 @@
 button {
-  background-color: #333;
-  color: white;
+  background-color: var(--custom-green);
+  color: var(--custom-gray);
   font-size: 16px;
   font-weight: 600;
   text-transform: uppercase;

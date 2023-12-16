@@ -1,9 +1,11 @@
 import './TodoButton.css'
 
-function TodoButton() {
+function TodoButton({ setOpenModal }) {
     return (
         <button onClick={
-            () => { console.log('click') }
+            () => {
+                setOpenModal(state => !state)
+            }
         }>Agregar tarea +</button>
     );
 }

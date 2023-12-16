@@ -3,3 +3,9 @@
   padding: 0 0 56px 0;
   list-style: none;
 }
+
+.TodoList div {
+  color: var(--custom-yellow);
+  text-align: center;
+  font-weight: bold;
+}
